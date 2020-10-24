@@ -96,8 +96,7 @@ module CrackPipe
         end
 
         def ctx_expected_as_arg?(method)
-          method.arity.nonzero? &&
-            (method.parameters.flatten & %i[ctx _ _ctx]).any?
+          method.arity.nonzero?
         end
 
         def kwargs_with_context(action, context)
