@@ -16,6 +16,7 @@ Gem::Specification.new do |s|
   s.files         = %w[LICENSE.txt README.md] + Dir['lib/**/*.rb']
   s.require_paths = %w[lib]
 
+  s.add_dependency 'hashie', '~> 4.1.0'
   s.add_development_dependency 'bundler',  '> 1.16'
   s.add_development_dependency 'minitest', '~> 5.0'
   s.add_development_dependency 'pry',      '~> 0.12.1'
