@@ -81,13 +81,13 @@ module CrackPipe
 
         def exec_with_args(e, action, context, kwargs)
           action.context = context
+          action.atts = context[:atts]
 
           if e.is_a?(Symbol)
             if ctx_expected_as_arg?(action.method(e))
-              # DEPRECATED! :>
+              # DEPRECATED
               action.public_send(e, context, **kwargs)
             else
-              # NEW HOTNESS! :>
               action.public_send(e)
             end
           else
